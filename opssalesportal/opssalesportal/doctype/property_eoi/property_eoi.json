@@ -1,0 +1,263 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-28 17:15:30.267151",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reservation_id",
+  "property_id",
+  "contract_name",
+  "entity_abn",
+  "buyer_type",
+  "buyer_grants",
+  "foreign_buyer",
+  "company_name",
+  "company_address",
+  "trust_name",
+  "corp_trustee_acn",
+  "bare_trustee",
+  "bare_trust",
+  "bare_trustee_email",
+  "eoi_signed",
+  "solicitor_id",
+  "column_break_wowmk",
+  "buying_as",
+  "project_id",
+  "last_status_date",
+  "entity_tfn",
+  "customer_id",
+  "send_esign_agreement",
+  "deposit_type",
+  "company_acn",
+  "company_email",
+  "corp_trustee_smsf",
+  "smsf_name",
+  "bare_trustee_acn",
+  "bare_trustee_address",
+  "eoi_status",
+  "user_id",
+  "mortgage_broker_id",
+  "customer"
+ ],
+ "fields": [
+  {
+   "fieldname": "reservation_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reservation Id",
+   "options": "Property Reservations",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.reservation_id",
+   "fetch_from": "reservation_id.property_id",
+   "fieldname": "property_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Realestate Property",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_name",
+   "fieldtype": "Data",
+   "label": "Contract Name"
+  },
+  {
+   "fieldname": "entity_abn",
+   "fieldtype": "Data",
+   "label": "Entity Abn"
+  },
+  {
+   "fieldname": "buyer_type",
+   "fieldtype": "Data",
+   "label": "Buyer Type"
+  },
+  {
+   "fieldname": "buyer_grants",
+   "fieldtype": "Data",
+   "label": "Buyer Grants"
+  },
+  {
+   "fieldname": "foreign_buyer",
+   "fieldtype": "Data",
+   "label": "Foreign Buyer"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "company_address",
+   "fieldtype": "Data",
+   "label": "Company Address"
+  },
+  {
+   "fieldname": "trust_name",
+   "fieldtype": "Data",
+   "label": "Trust Name"
+  },
+  {
+   "fieldname": "corp_trustee_acn",
+   "fieldtype": "Data",
+   "label": "Corp Trustee Acn"
+  },
+  {
+   "fieldname": "bare_trustee",
+   "fieldtype": "Data",
+   "label": "Bare Trustee"
+  },
+  {
+   "fieldname": "bare_trust",
+   "fieldtype": "Data",
+   "label": "Bare Trust"
+  },
+  {
+   "fieldname": "bare_trustee_email",
+   "fieldtype": "Data",
+   "label": "Bare Trustee Email"
+  },
+  {
+   "fieldname": "eoi_signed",
+   "fieldtype": "Data",
+   "label": "Eoi Signed"
+  },
+  {
+   "fieldname": "solicitor_id",
+   "fieldtype": "Link",
+   "label": "Solicitor",
+   "options": "Vendor"
+  },
+  {
+   "fieldname": "column_break_wowmk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "buying_as",
+   "fieldtype": "Data",
+   "label": "Buying As"
+  },
+  {
+   "depends_on": "eval:doc.reservation_id",
+   "fetch_from": "reservation_id.project_id",
+   "fieldname": "project_id",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Realestate Project",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_status_date",
+   "fieldtype": "Datetime",
+   "label": "Last Status Date"
+  },
+  {
+   "fieldname": "entity_tfn",
+   "fieldtype": "Data",
+   "label": "Entity Tfn"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Link",
+   "label": "Customer Id",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "send_esign_agreement",
+   "fieldtype": "Data",
+   "label": "Send Esign Agreement"
+  },
+  {
+   "fieldname": "deposit_type",
+   "fieldtype": "Data",
+   "label": "Deposit Type"
+  },
+  {
+   "fieldname": "company_acn",
+   "fieldtype": "Data",
+   "label": "Company Acn"
+  },
+  {
+   "fieldname": "company_email",
+   "fieldtype": "Data",
+   "label": "Company Email"
+  },
+  {
+   "fieldname": "corp_trustee_smsf",
+   "fieldtype": "Data",
+   "label": "Corp Trustee Smsf"
+  },
+  {
+   "fieldname": "smsf_name",
+   "fieldtype": "Data",
+   "label": "Smsf Name"
+  },
+  {
+   "fieldname": "bare_trustee_acn",
+   "fieldtype": "Data",
+   "label": "Bare Trustee Acn"
+  },
+  {
+   "fieldname": "bare_trustee_address",
+   "fieldtype": "Data",
+   "label": "Bare Trustee Address"
+  },
+  {
+   "default": "To be Sent",
+   "fieldname": "eoi_status",
+   "fieldtype": "Link",
+   "label": "Eoi Status",
+   "options": "EOI Status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User Id",
+   "options": "User"
+  },
+  {
+   "fieldname": "mortgage_broker_id",
+   "fieldtype": "Link",
+   "label": "Mortgage Broker ",
+   "options": "Vendor"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-25 18:46:01.122284",
+ "modified_by": "Administrator",
+ "module": "Opssalesportal",
+ "name": "Property Eoi",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

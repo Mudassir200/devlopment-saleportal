@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include opssalesportal *.css
+recursive-include opssalesportal *.csv
+recursive-include opssalesportal *.html
+recursive-include opssalesportal *.ico
+recursive-include opssalesportal *.js
+recursive-include opssalesportal *.json
+recursive-include opssalesportal *.md
+recursive-include opssalesportal *.png
+recursive-include opssalesportal *.py
+recursive-include opssalesportal *.svg
+recursive-include opssalesportal *.txt
+recursive-exclude opssalesportal *.pyc

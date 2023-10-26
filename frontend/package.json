@@ -1,0 +1,32 @@
+{
+  "name": "frappe-ui-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/assets/opssalesportal/frontend/ && yarn copy-html-entry",
+    "copy-html-entry": "cp ../opssalesportal/public/frontend/index.html ../opssalesportal/www/s.html",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@vueform/multiselect": "^2.6.4",
+    "axios": "^1.5.1",
+    "feather-icons": "^4.28.0",
+    "frappe-ui": "^0.1.6",
+    "swiper": "^10.3.1",
+    "vue": "^3.2.25",
+    "vue-carousel": "^0.18.0",
+    "vue-multiselect": "^2.1.7",
+    "vue-router": "^4.0.12",
+    "vue3-carousel": "^0.3.1",
+    "vue3-google-map": "^0.18.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15",
+    "vite": "^2.7.2"
+  }
+}

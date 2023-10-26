@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2023-09-28 10:37:24.669851",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amenities_name",
+  "description",
+  "icon",
+  "preview",
+  "active"
+ ],
+ "fields": [
+  {
+   "fieldname": "amenities_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Amenities Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Attach Image",
+   "label": "Icon"
+  },
+  {
+   "depends_on": "eval:doc.icon",
+   "fieldname": "preview",
+   "fieldtype": "Image",
+   "label": "Preview",
+   "max_height": "200px",
+   "options": "icon",
+   "width": "200px"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-11 12:04:31.548158",
+ "modified_by": "Administrator",
+ "module": "Opssalesportal",
+ "name": "Amenities",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "amenities_name",
+ "track_changes": 1
+}

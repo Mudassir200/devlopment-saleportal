@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2023-09-28 16:34:08.354617",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project_id",
+  "property_id",
+  "buyer_type",
+  "reservation_date",
+  "reservation_status",
+  "personal_bc",
+  "created_by",
+  "column_break_olqgw",
+  "customer_id",
+  "deposit_type",
+  "reserved_by",
+  "reservation_enddate",
+  "property_session_date",
+  "smsf_bc",
+  "last_status_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Realestate Project",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.project_id",
+   "fieldname": "property_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Realestate Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "buyer_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Buyer Type",
+   "options": "Buyer Type"
+  },
+  {
+   "fieldname": "reservation_date",
+   "fieldtype": "Datetime",
+   "label": "Reservation Date"
+  },
+  {
+   "default": "Reserved",
+   "fieldname": "reservation_status",
+   "fieldtype": "Link",
+   "label": "Reservation Status",
+   "options": "Reservation Status"
+  },
+  {
+   "fieldname": "personal_bc",
+   "fieldtype": "Float",
+   "label": "Personal BC"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_olqgw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "default": "Cash",
+   "fieldname": "deposit_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Deposit Type",
+   "options": "Deposit Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reserved_by",
+   "fieldtype": "Link",
+   "label": "Reserved By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reservation_enddate",
+   "fieldtype": "Datetime",
+   "label": "Reservation Enddate"
+  },
+  {
+   "fieldname": "property_session_date",
+   "fieldtype": "Date",
+   "label": "Property Session Date"
+  },
+  {
+   "fieldname": "smsf_bc",
+   "fieldtype": "Float",
+   "label": "SMSF BC"
+  },
+  {
+   "fieldname": "last_status_date",
+   "fieldtype": "Datetime",
+   "label": "Last Status Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-09 17:07:56.715442",
+ "modified_by": "Administrator",
+ "module": "Opssalesportal",
+ "name": "Property Reservations",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "project_id,property_id",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

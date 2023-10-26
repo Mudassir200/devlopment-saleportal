@@ -1,0 +1,432 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "autoincrement",
+ "creation": "2023-09-28 11:52:57.552139",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "property_name",
+  "project_id",
+  "property_type",
+  "lot_no",
+  "bedrooms",
+  "study",
+  "powder_room",
+  "storeys",
+  "allocation_enddate",
+  "internal_area",
+  "external_area",
+  "land_size_area",
+  "build_area_calculations",
+  "build_price",
+  "total_price",
+  "additional_carparks_allowed",
+  "additional_storage_units",
+  "estimated_council_rates",
+  "estimated_owner_corporation_fees",
+  "property_featured_image",
+  "property_terms",
+  "exchange_date",
+  "settlement_date",
+  "aspects_view",
+  "floor_plan_name",
+  "documents",
+  "is_archived",
+  "house_balance_deposit_type",
+  "house_balance_deposit",
+  "land_balance_deposit_type",
+  "is_featured",
+  "column_break_iggpj",
+  "contract_type",
+  "bathrooms",
+  "mpr",
+  "apartment_floor",
+  "property_status",
+  "strategist_id",
+  "garage_area",
+  "total_build_area",
+  "exclusive_use_area",
+  "land_area_calculations",
+  "land_price",
+  "included_carparks",
+  "included_storage_units",
+  "estimated_rent",
+  "estimated_water_rates",
+  "rental_yield",
+  "property_images",
+  "unconditional_date",
+  "dor_sale",
+  "allowed_buyer_type",
+  "floor_plan",
+  "special_sale_condition",
+  "land_balance_deposit",
+  "allocation_date",
+  "last_status_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Property Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "project_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Realestate Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property Type",
+   "options": "Property Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bedrooms",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Bedrooms"
+  },
+  {
+   "fieldname": "study",
+   "fieldtype": "Int",
+   "label": "Study"
+  },
+  {
+   "fieldname": "powder_room",
+   "fieldtype": "Int",
+   "label": "Powder Room"
+  },
+  {
+   "fieldname": "storeys",
+   "fieldtype": "Int",
+   "label": "Storeys"
+  },
+  {
+   "fieldname": "allocation_enddate",
+   "fieldtype": "Date",
+   "label": "Allocation Enddate"
+  },
+  {
+   "fieldname": "internal_area",
+   "fieldtype": "Float",
+   "label": "Internal Area"
+  },
+  {
+   "fieldname": "external_area",
+   "fieldtype": "Float",
+   "label": "External / Balcony Area"
+  },
+  {
+   "fieldname": "land_size_area",
+   "fieldtype": "Float",
+   "label": "Land Size Area"
+  },
+  {
+   "default": "Estimated",
+   "fieldname": "build_area_calculations",
+   "fieldtype": "Select",
+   "label": "Build Area Calculation",
+   "options": "Estimated\nVerified"
+  },
+  {
+   "fieldname": "build_price",
+   "fieldtype": "Float",
+   "label": "Build Price"
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Price"
+  },
+  {
+   "fieldname": "additional_carparks_allowed",
+   "fieldtype": "Int",
+   "label": "Additional Carparks Allowed"
+  },
+  {
+   "fieldname": "additional_storage_units",
+   "fieldtype": "Int",
+   "label": "Additional Storage Units"
+  },
+  {
+   "fieldname": "estimated_council_rates",
+   "fieldtype": "Float",
+   "label": "Estimated Council Rates/year"
+  },
+  {
+   "fieldname": "estimated_owner_corporation_fees",
+   "fieldtype": "Float",
+   "label": "Estimated Owner Corporation Fees/year"
+  },
+  {
+   "fieldname": "property_featured_image",
+   "fieldtype": "Attach Image",
+   "label": "Featured Image"
+  },
+  {
+   "fieldname": "property_terms",
+   "fieldtype": "Text",
+   "label": "Property Terms",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "exchange_date",
+   "fieldtype": "Date",
+   "label": "Exchange Date"
+  },
+  {
+   "fieldname": "settlement_date",
+   "fieldtype": "Date",
+   "label": "Settlement Date"
+  },
+  {
+   "fieldname": "aspects_view",
+   "fieldtype": "Select",
+   "label": "Aspects View",
+   "options": "\nSouth\nSouth East\nSouth West\nEast\nWest\nNorth\nNorth East\nNorth West"
+  },
+  {
+   "fieldname": "floor_plan_name",
+   "fieldtype": "Data",
+   "label": "Floor Plan Name"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Attach",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "is_archived",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Is Archived"
+  },
+  {
+   "default": "Fixed",
+   "fieldname": "house_balance_deposit_type",
+   "fieldtype": "Select",
+   "label": "House Balance Deposit Type",
+   "options": "Fixed\nPercentage"
+  },
+  {
+   "fieldname": "house_balance_deposit",
+   "fieldtype": "Float",
+   "label": "House Balance Deposit"
+  },
+  {
+   "default": "Fixed",
+   "fieldname": "land_balance_deposit_type",
+   "fieldtype": "Select",
+   "label": "Land Balance Deposit Type",
+   "options": "Fixed\nPercentage"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_featured",
+   "fieldtype": "Check",
+   "label": "Featured?"
+  },
+  {
+   "fieldname": "column_break_iggpj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "One Part",
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "One Part\nTwo Part",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bathrooms",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Bathrooms"
+  },
+  {
+   "fieldname": "mpr",
+   "fieldtype": "Int",
+   "label": "Mpr"
+  },
+  {
+   "fieldname": "apartment_floor",
+   "fieldtype": "Int",
+   "label": "Apartment Floor"
+  },
+  {
+   "fieldname": "property_status",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property Status",
+   "options": "Property Status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "strategist_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Strategist Allocated",
+   "options": "User"
+  },
+  {
+   "fieldname": "garage_area",
+   "fieldtype": "Float",
+   "label": "Garage Area"
+  },
+  {
+   "fieldname": "total_build_area",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Build Area"
+  },
+  {
+   "fieldname": "exclusive_use_area",
+   "fieldtype": "Float",
+   "label": "Exclusive Use Area"
+  },
+  {
+   "default": "Estimated",
+   "fieldname": "land_area_calculations",
+   "fieldtype": "Select",
+   "label": "Land Area Calculation",
+   "options": "Estimated\nVerified"
+  },
+  {
+   "fieldname": "land_price",
+   "fieldtype": "Float",
+   "label": "Land Price"
+  },
+  {
+   "fieldname": "included_carparks",
+   "fieldtype": "Int",
+   "label": "Included Carparks"
+  },
+  {
+   "fieldname": "included_storage_units",
+   "fieldtype": "Int",
+   "label": "Included Storage Units"
+  },
+  {
+   "fieldname": "estimated_rent",
+   "fieldtype": "Float",
+   "label": "Estimated Rent/week"
+  },
+  {
+   "fieldname": "estimated_water_rates",
+   "fieldtype": "Float",
+   "label": "Estimated Water Rates/year"
+  },
+  {
+   "fieldname": "rental_yield",
+   "fieldtype": "Float",
+   "label": "Rental Yield"
+  },
+  {
+   "fieldname": "property_images",
+   "fieldtype": "Table",
+   "label": "Property Images",
+   "options": "Realestate Media"
+  },
+  {
+   "fieldname": "unconditional_date",
+   "fieldtype": "Date",
+   "label": "Unconditional Date"
+  },
+  {
+   "fieldname": "dor_sale",
+   "fieldtype": "Select",
+   "label": "DOR Sale",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "allowed_buyer_type",
+   "fieldtype": "Select",
+   "label": "Allowed Buyer Type",
+   "options": "\nOwner-Occupier\nInvestor\nSMSF\nTrust"
+  },
+  {
+   "fieldname": "floor_plan",
+   "fieldtype": "Attach Image",
+   "label": "Floor Plan"
+  },
+  {
+   "fieldname": "special_sale_condition",
+   "fieldtype": "Text",
+   "label": "Special Sale Condition",
+   "max_height": "255px"
+  },
+  {
+   "fieldname": "land_balance_deposit",
+   "fieldtype": "Float",
+   "label": "Land Balance Deposit"
+  },
+  {
+   "fieldname": "allocation_date",
+   "fieldtype": "Date",
+   "label": "Allocation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_status_date",
+   "fieldtype": "Datetime",
+   "label": "Last Status Date",
+   "read_only": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nArchived\nDeactive"
+  },
+  {
+   "fieldname": "lot_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lot No.",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-26 12:08:49.753482",
+ "modified_by": "Administrator",
+ "module": "Opssalesportal",
+ "name": "Realestate Property",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "property_name",
+ "track_changes": 1
+}

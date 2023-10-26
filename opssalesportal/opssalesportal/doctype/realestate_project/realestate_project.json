@@ -1,0 +1,904 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-09-28 11:17:26.821070",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sp_info",
+  "naming_series",
+  "agent",
+  "project_name",
+  "stage",
+  "parent_project_id",
+  "column_break_sr0nn",
+  "realestate_type",
+  "multistage",
+  "mandatory_esign",
+  "is_featured",
+  "project_info",
+  "builder",
+  "developers",
+  "project_code",
+  "property_type",
+  "developer_flexibility",
+  "state_standard_penalty_interest_rate",
+  "contract_type",
+  "important_information",
+  "project_levels",
+  "column_break_adxc6",
+  "website",
+  "developer_kpi_deadline",
+  "developer_kpi_lot_count",
+  "project_condition",
+  "project_status",
+  "total_properties",
+  "project_contact",
+  "google_drive_link",
+  "contract_info",
+  "contracts_how_they_are_issued",
+  "incentives_how_they_are_issued",
+  "contract_agreement_issue_timeframe_from_eoi_date",
+  "column_break_cjwzk",
+  "timeframe_from_eoi_to_contract_signed",
+  "building_bond_required",
+  "reservation_terms",
+  "project_term",
+  "column_break_akui1",
+  "required_documents",
+  "currency",
+  "deposit_type",
+  "holding_deposit",
+  "eoi_info",
+  "eoi_trust_title",
+  "eoi_trust_account",
+  "eoi_bank_institution",
+  "eoi_bsb",
+  "eoi_account_no",
+  "eoi_swift_code",
+  "eoi_reference",
+  "column_break_c71zr",
+  "eoi_trust_title2",
+  "eoi_trust_account2",
+  "eoi_bank_institution2",
+  "eoi_bsb2",
+  "eoi_account_no2",
+  "eoi_swift_code2",
+  "eoi_reference2",
+  "last_sync_date",
+  "section_break_drx7p",
+  "agent_deposit_condition",
+  "agent_terms",
+  "esign_consent",
+  "incentives",
+  "incentive",
+  "settlement_info",
+  "project_enddate",
+  "actual_title_date",
+  "title_status",
+  "title_estimate_from_agent",
+  "title_date",
+  "column_break_ovl9j",
+  "desd_delay_reason",
+  "desd_delay_advised_by",
+  "registration_last_updated",
+  "settlement_terms",
+  "valuation",
+  "valuation_access_estimated_date",
+  "valuation_access_status",
+  "valuation_access_contact",
+  "column_break_ugxwu",
+  "valuation_access_contact_number",
+  "valuation_email",
+  "construction_info",
+  "project_startdate",
+  "estimated_construction_start_date",
+  "column_break_mqozk",
+  "estimated_defect_inspection_date",
+  "rental_info",
+  "initial_pm_company",
+  "initial_pm_type",
+  "initial_pm_term",
+  "initial_pm_rate",
+  "clawback",
+  "column_break_r8amk",
+  "perm_pm_company",
+  "perm_pm_type",
+  "perm_pm_term",
+  "perm_pm_rate",
+  "location",
+  "street_address",
+  "country",
+  "state",
+  "city",
+  "province",
+  "zipcode",
+  "full_address",
+  "column_break_iayny",
+  "coordinate",
+  "media",
+  "project_logo",
+  "featured_image",
+  "master_plan",
+  "project_video",
+  "column_break_iakan",
+  "project_images",
+  "project_documents",
+  "content",
+  "description",
+  "summary",
+  "listing_status",
+  "available_properties",
+  "estate",
+  "is_legacy",
+  "master_contract_received_date",
+  "construction_update_date",
+  "construction_update",
+  "construction_image_link",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "sp_info",
+   "fieldtype": "Section Break",
+   "label": "SP Info"
+  },
+  {
+   "depends_on": "eval: !doc.__islocal",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Unique Project Name",
+   "options": "PRO-",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.realestate_type == 'Project'",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.realestate_type == 'Stage'",
+   "fieldname": "stage",
+   "fieldtype": "Data",
+   "label": "Stage Name"
+  },
+  {
+   "depends_on": "eval:doc.realestate_type == 'Stage'",
+   "fieldname": "parent_project_id",
+   "fieldtype": "Link",
+   "label": "Parent Project",
+   "options": "Realestate Project"
+  },
+  {
+   "fieldname": "column_break_sr0nn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Project",
+   "fieldname": "realestate_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Realestate Type",
+   "options": "Project\nStage",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "multistage",
+   "fieldtype": "Check",
+   "label": "Multi Stage?"
+  },
+  {
+   "default": "0",
+   "fieldname": "mandatory_esign",
+   "fieldtype": "Check",
+   "label": "Mandatory Esign"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_featured",
+   "fieldtype": "Check",
+   "label": "Featured Project?"
+  },
+  {
+   "fieldname": "project_info",
+   "fieldtype": "Section Break",
+   "label": "Project Info"
+  },
+  {
+   "fieldname": "developers",
+   "fieldtype": "Link",
+   "label": "Developers",
+   "options": "Vendor"
+  },
+  {
+   "fieldname": "project_code",
+   "fieldtype": "Data",
+   "label": "Project Code"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property Type",
+   "options": "Property Type",
+   "reqd": 1
+  },
+  {
+   "default": "Flexible",
+   "fieldname": "developer_flexibility",
+   "fieldtype": "Select",
+   "label": "Developer Flexibility",
+   "options": "Flexible\nNot Flexible"
+  },
+  {
+   "fieldname": "state_standard_penalty_interest_rate",
+   "fieldtype": "Int",
+   "label": "State Standard Penalty Interest Rate"
+  },
+  {
+   "fieldname": "important_information",
+   "fieldtype": "Text Editor",
+   "label": "Important Information",
+   "max_height": "120px"
+  },
+  {
+   "fieldname": "project_levels",
+   "fieldtype": "Int",
+   "label": "Project Levels"
+  },
+  {
+   "fieldname": "column_break_adxc6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "developer_kpi_deadline",
+   "fieldtype": "Date",
+   "label": "Developer Kpi Deadline"
+  },
+  {
+   "fieldname": "developer_kpi_lot_count",
+   "fieldtype": "Text",
+   "label": "Developer Kpi Lot Count",
+   "max_height": "80px"
+  },
+  {
+   "fieldname": "project_condition",
+   "fieldtype": "Text",
+   "label": "Project Condition",
+   "max_height": "100px"
+  },
+  {
+   "default": "Off Market",
+   "fieldname": "project_status",
+   "fieldtype": "Select",
+   "label": "Project Status",
+   "options": "Off Market\nOff the Plan\nUnder Construction\nComplete"
+  },
+  {
+   "fieldname": "total_properties",
+   "fieldtype": "Int",
+   "label": "Total Properties"
+  },
+  {
+   "fieldname": "project_contact",
+   "fieldtype": "Link",
+   "label": "Project Contact",
+   "options": "User"
+  },
+  {
+   "fieldname": "google_drive_link",
+   "fieldtype": "Text",
+   "label": "Google Drive Link",
+   "max_height": "60px"
+  },
+  {
+   "fieldname": "contract_info",
+   "fieldtype": "Section Break",
+   "label": "Contract Info"
+  },
+  {
+   "fieldname": "contracts_how_they_are_issued",
+   "fieldtype": "Data",
+   "label": "Contracts: How They Are Issued",
+   "length": 255
+  },
+  {
+   "fieldname": "incentives_how_they_are_issued",
+   "fieldtype": "Data",
+   "label": "Incentives: How They Are Issued"
+  },
+  {
+   "fieldname": "contract_agreement_issue_timeframe_from_eoi_date",
+   "fieldtype": "Data",
+   "label": "Contract Agreement Issue Timeframe From Eoi Date"
+  },
+  {
+   "fieldname": "column_break_cjwzk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timeframe_from_eoi_to_contract_signed",
+   "fieldtype": "Data",
+   "label": "Timeframe From Eoi To Contract Signed"
+  },
+  {
+   "default": "0",
+   "fieldname": "building_bond_required",
+   "fieldtype": "Check",
+   "label": "Building Bond Required"
+  },
+  {
+   "fieldname": "reservation_terms",
+   "fieldtype": "Section Break",
+   "label": "Reservation Terms"
+  },
+  {
+   "fieldname": "project_term",
+   "fieldtype": "Text Editor",
+   "label": "Term",
+   "max_height": "265px"
+  },
+  {
+   "fieldname": "column_break_akui1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required_documents",
+   "fieldtype": "Table MultiSelect",
+   "label": "Required Documents for Reservation",
+   "options": "Project Required Documents for Reservation"
+  },
+  {
+   "default": "AUD",
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "label": "Currency",
+   "options": "AUD\nCAD\nGBP\nUSD"
+  },
+  {
+   "fieldname": "deposit_type",
+   "fieldtype": "Select",
+   "label": "Deposit Type",
+   "options": "Fixed\nPercentage"
+  },
+  {
+   "fieldname": "eoi_info",
+   "fieldtype": "Section Break",
+   "label": "EOI Info"
+  },
+  {
+   "fieldname": "eoi_trust_title",
+   "fieldtype": "Data",
+   "label": "EOI 1 - Label to use"
+  },
+  {
+   "fieldname": "eoi_trust_account",
+   "fieldtype": "Data",
+   "label": "EOI 1 - Trust Account"
+  },
+  {
+   "fieldname": "eoi_bank_institution",
+   "fieldtype": "Data",
+   "label": "EOI 1 - Bank Institution"
+  },
+  {
+   "fieldname": "eoi_bsb",
+   "fieldtype": "Data",
+   "label": "EOI 1 - BSB"
+  },
+  {
+   "fieldname": "eoi_account_no",
+   "fieldtype": "Data",
+   "label": "EOI 1 - Account No"
+  },
+  {
+   "fieldname": "eoi_swift_code",
+   "fieldtype": "Data",
+   "label": "EOI 1 - Swift Code"
+  },
+  {
+   "fieldname": "eoi_reference",
+   "fieldtype": "Data",
+   "label": "EOI 1 - Reference"
+  },
+  {
+   "fieldname": "column_break_c71zr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "eoi_trust_title2",
+   "fieldtype": "Data",
+   "label": "EOI 2 - Label to use"
+  },
+  {
+   "fieldname": "eoi_trust_account2",
+   "fieldtype": "Data",
+   "label": "EOI 2 - Trust Account"
+  },
+  {
+   "fieldname": "eoi_bank_institution2",
+   "fieldtype": "Data",
+   "label": "EOI 2 - Bank Institution"
+  },
+  {
+   "fieldname": "eoi_bsb2",
+   "fieldtype": "Data",
+   "label": "EOI 2 - BSB"
+  },
+  {
+   "fieldname": "eoi_account_no2",
+   "fieldtype": "Data",
+   "label": "EOI 2 - Account No"
+  },
+  {
+   "fieldname": "eoi_swift_code2",
+   "fieldtype": "Data",
+   "label": "EOI 2 - Swift Code"
+  },
+  {
+   "fieldname": "eoi_reference2",
+   "fieldtype": "Data",
+   "label": "EOI 2 - Reference"
+  },
+  {
+   "fieldname": "last_sync_date",
+   "fieldtype": "Datetime",
+   "label": "Last Sync Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_drx7p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "agent_deposit_condition",
+   "fieldtype": "Text",
+   "label": "EOI Deposit Condition",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "agent_terms",
+   "fieldtype": "Text Editor",
+   "label": "EOI Disclaimers"
+  },
+  {
+   "fieldname": "esign_consent",
+   "fieldtype": "Text Editor",
+   "label": "Esign Consent"
+  },
+  {
+   "fieldname": "incentives",
+   "fieldtype": "Section Break",
+   "label": "Incentives"
+  },
+  {
+   "fieldname": "incentive",
+   "fieldtype": "Text Editor",
+   "label": "Incentive"
+  },
+  {
+   "fieldname": "settlement_info",
+   "fieldtype": "Section Break",
+   "label": "Settlement Info"
+  },
+  {
+   "fieldname": "project_enddate",
+   "fieldtype": "Date",
+   "label": "Settlement Date"
+  },
+  {
+   "fieldname": "actual_title_date",
+   "fieldtype": "Date",
+   "label": "Actual Title Date"
+  },
+  {
+   "default": "Not Titled",
+   "fieldname": "title_status",
+   "fieldtype": "Select",
+   "label": "Title Status",
+   "options": "Not Titled\nTitled"
+  },
+  {
+   "fieldname": "title_estimate_from_agent",
+   "fieldtype": "Data",
+   "label": "Title Estimate From Agent"
+  },
+  {
+   "fieldname": "title_date",
+   "fieldtype": "Date",
+   "label": "Estimated Title Date"
+  },
+  {
+   "fieldname": "column_break_ovl9j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "desd_delay_reason",
+   "fieldtype": "Data",
+   "label": "Delay Reason"
+  },
+  {
+   "fieldname": "desd_delay_advised_by",
+   "fieldtype": "Data",
+   "label": "Advised By"
+  },
+  {
+   "fieldname": "registration_last_updated",
+   "fieldtype": "Date",
+   "label": "Registration Last Updated"
+  },
+  {
+   "fieldname": "settlement_terms",
+   "fieldtype": "Int",
+   "label": "Settlement Terms (In days)"
+  },
+  {
+   "fieldname": "valuation",
+   "fieldtype": "Section Break",
+   "label": "Valuation"
+  },
+  {
+   "fieldname": "valuation_access_estimated_date",
+   "fieldtype": "Date",
+   "label": "Valuation Access Estimated Date"
+  },
+  {
+   "fieldname": "valuation_access_status",
+   "fieldtype": "Data",
+   "label": "Valuation Status"
+  },
+  {
+   "fieldname": "valuation_access_contact",
+   "fieldtype": "Data",
+   "label": "Valuation Access Contact Name",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "column_break_ugxwu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valuation_access_contact_number",
+   "fieldtype": "Data",
+   "label": "Valuation Access Contact Number"
+  },
+  {
+   "fieldname": "valuation_email",
+   "fieldtype": "Data",
+   "label": "Valuation Email"
+  },
+  {
+   "fieldname": "construction_info",
+   "fieldtype": "Section Break",
+   "label": "Construction Info"
+  },
+  {
+   "fieldname": "project_startdate",
+   "fieldtype": "Date",
+   "label": "Construction Start Date"
+  },
+  {
+   "fieldname": "estimated_construction_start_date",
+   "fieldtype": "Date",
+   "label": "Estimated Construction Start Date"
+  },
+  {
+   "fieldname": "column_break_mqozk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_defect_inspection_date",
+   "fieldtype": "Date",
+   "label": "Estimated Defect Inspection Date"
+  },
+  {
+   "fieldname": "rental_info",
+   "fieldtype": "Section Break",
+   "label": "Rental Info"
+  },
+  {
+   "fieldname": "initial_pm_company",
+   "fieldtype": "Data",
+   "label": "Initial PM Company"
+  },
+  {
+   "fieldname": "initial_pm_type",
+   "fieldtype": "Data",
+   "label": "Initial PM Type"
+  },
+  {
+   "fieldname": "initial_pm_term",
+   "fieldtype": "Data",
+   "label": "Initial PM Term"
+  },
+  {
+   "fieldname": "initial_pm_rate",
+   "fieldtype": "Data",
+   "label": "Initial PM Rate"
+  },
+  {
+   "fieldname": "clawback",
+   "fieldtype": "Data",
+   "label": "Clawback?"
+  },
+  {
+   "fieldname": "column_break_r8amk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "perm_pm_company",
+   "fieldtype": "Data",
+   "label": "Perm PM Company"
+  },
+  {
+   "fieldname": "perm_pm_type",
+   "fieldtype": "Data",
+   "label": "Perm PM Type"
+  },
+  {
+   "fieldname": "perm_pm_term",
+   "fieldtype": "Data",
+   "label": "Perm PM Term"
+  },
+  {
+   "fieldname": "perm_pm_rate",
+   "fieldtype": "Data",
+   "label": "Perm PM Rate"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "street_address",
+   "fieldtype": "Data",
+   "label": "Street Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.country",
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "State",
+   "options": "State",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.country",
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "City",
+   "options": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "province",
+   "fieldtype": "Data",
+   "label": "Province"
+  },
+  {
+   "fieldname": "zipcode",
+   "fieldtype": "Data",
+   "label": "Zipcode",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_address",
+   "fieldtype": "Read Only",
+   "label": "Full Address"
+  },
+  {
+   "fieldname": "column_break_iayny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "coordinate",
+   "fieldtype": "Geolocation",
+   "label": "Coordinate"
+  },
+  {
+   "fieldname": "media",
+   "fieldtype": "Section Break",
+   "label": "Media"
+  },
+  {
+   "fieldname": "project_logo",
+   "fieldtype": "Attach Image",
+   "label": "Project Logo"
+  },
+  {
+   "fieldname": "featured_image",
+   "fieldtype": "Attach Image",
+   "label": "Featured Image"
+  },
+  {
+   "fieldname": "master_plan",
+   "fieldtype": "Attach",
+   "label": "Master Plan"
+  },
+  {
+   "fieldname": "project_documents",
+   "fieldtype": "Table",
+   "label": "Project Documents",
+   "options": "Project Documents"
+  },
+  {
+   "fieldname": "column_break_iakan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_video",
+   "fieldtype": "Data",
+   "label": "Project Video"
+  },
+  {
+   "fieldname": "project_images",
+   "fieldtype": "Table",
+   "label": "Project Images",
+   "options": "Realestate Media"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Section Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text",
+   "label": "Summary"
+  },
+  {
+   "default": "Active",
+   "fieldname": "listing_status",
+   "fieldtype": "Data",
+   "label": "Listing Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_properties",
+   "fieldtype": "Int",
+   "label": "Available Properties"
+  },
+  {
+   "fieldname": "estate",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Estate"
+  },
+  {
+   "fieldname": "master_contract_received_date",
+   "fieldtype": "Date",
+   "label": "Master Contract Received Date"
+  },
+  {
+   "fieldname": "construction_update_date",
+   "fieldtype": "Date",
+   "label": "Construction Update Date"
+  },
+  {
+   "fieldname": "construction_update",
+   "fieldtype": "Long Text",
+   "label": "Construction Update"
+  },
+  {
+   "fieldname": "construction_image_link",
+   "fieldtype": "Data",
+   "label": "Construction Image Link"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_legacy",
+   "fieldtype": "Check",
+   "label": "Is Legacy"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "\nOne Part\nTwo Part"
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "label": "Agent Company",
+   "options": "Vendor"
+  },
+  {
+   "fieldname": "builder",
+   "fieldtype": "Link",
+   "label": "Builder",
+   "options": "Vendor"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nHold\nDeactive"
+  },
+  {
+   "fieldname": "holding_deposit",
+   "fieldtype": "Float",
+   "label": "Holding Deposit"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-24 14:15:53.991771",
+ "modified_by": "Administrator",
+ "module": "Opssalesportal",
+ "name": "Realestate Project",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Salesportal Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Salesportal User",
+   "share": 1
+  }
+ ],
+ "search_fields": "project_name",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "project_name",
+ "track_changes": 1
+}

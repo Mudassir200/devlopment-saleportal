@@ -1,0 +1,138 @@
+{
+      "stocktableColumns": [
+        {
+          "title": "Stage",
+          "value": "stage",
+          "multistage": true,
+          "sort": true
+        },
+        {
+          "title": "Est. Settl Date",
+          "value": "project_enddate",
+          "multistage": true,
+          "sort": true
+        },
+        {
+          "title": "Title Date",
+          "value": "title_date",
+          "multistage": true,
+          "sort": true
+        },
+        {
+          "title": "Lot No",
+          "value": "Lot_No",
+          "sort":true
+        },
+        {
+          "title": "Cont. Type",
+          "value": "Cont_Type",
+          "sort":true
+        },
+        {
+          "title": "Bed",
+          "value": "Bed",
+          "sort":true
+        },
+        {
+          "title": "Bath",
+          "value": "Bath",
+          "sort":true
+        },
+        {
+          "title": "Car",
+          "value": "Car",
+          "sort":true
+        },
+        {
+          "title": "Land Area (in m  )",
+          "value": "land_size_area",
+          "multistage_conType":true,
+          "sort": true
+        },
+        {
+          "title": "Build Area (in m  )",
+          "value": "Build_Area",
+          "sort":true
+        },
+        {
+          "title": "Total Price",
+          "value": "total_price",
+          "price":true,
+          "sort": true
+        },
+        {
+          "title": "Land Price",
+          "value": "land_price",
+          "multistage_conType":true,
+          "price":true,
+          "sort": true
+        },
+        {
+          "title": "House Price",
+          "value": "House_Price",
+          "multistage_conType":true,
+          "price":true,
+          "sort": true
+        },
+        {
+          "title": "Est. Rent Per Week",
+          "value": "estimated_rent",
+          "price":true,
+          "sort": false
+        },
+        {
+          "title": "Council Rates",
+          "value": "estimated_council_rates",
+          "price":true,
+          "sort": true
+        },
+        {
+          "title": "Water Rates",
+          "value": "estimated_water_rates",
+          "price":true,
+          "sort": true
+        },
+        {
+          "title": "Owner Corp",
+          "value": "Owner_Corp",
+          "sort":true
+        },
+        {
+          "title": "Yield",
+          "value": "Yield",
+          "sort":true
+        },
+        {
+          "title": "Status",
+          "value": "badge",
+          "sort":true
+        },
+        {
+          "title": "Action",
+          "value": "Action",
+          "sort":true
+        }
+      ],
+      "tabs": [
+        {
+            "id": "detail",
+            "tab_item": "Detail"
+        },
+        {
+            "id": "property_Stock",
+            "tab_item": "Property Stock"
+        },
+        {
+            "id": "documents",
+            "tab_item": "Documents"
+        },
+        {
+            "id": "description",
+            "tab_item": "Description"
+        },
+        {
+            "id": "locations",
+            "tab_item": "Locations"
+        }
+]
+}

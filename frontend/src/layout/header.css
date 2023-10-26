@@ -1,0 +1,8 @@
+header.header_navigation .logo img {
+    max-width: 217px;
+    width: 100%;
+}
+header.header_navigation .menu button.d-btn:after {
+    content: "\25BC";
+    font-size: 11px;
+}
