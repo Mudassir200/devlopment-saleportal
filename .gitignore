@@ -1,0 +1,12 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+__pycache__
+tags
+node_modules
+opssalesportal/docs/current
+opssalesportal/public/frontend
+opssalesportal/www/teams.html
+opssalesportal/www/s.html
+build
